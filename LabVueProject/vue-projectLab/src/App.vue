@@ -29,7 +29,7 @@ import TheWelcome from './components/TheWelcome.vue'
       <div class="nav-items">
         <a>Home</a>
         <div class="navLine-splitItems"></div>
-        <a>About</a>
+        <a href="./components/About.vue">About</a>
         <div class="navLine-splitItems"></div>
         <a>Contact</a>
         <div class="navLine-splitItems"></div>
@@ -48,9 +48,9 @@ import TheWelcome from './components/TheWelcome.vue'
     <img class="front-img" src="../Img/pexels-andrew-8960464.jpg" height="532" width="auto"/>
     <div class="right-sideImg">
       <div class="social-icons">
-        <img src="../Img/letter-m.png" height="32" width="32"/>
-        <img src="../Img/facebook%20(3).png" height="32" width="32"/>
-        <img src="../Img/twitter.png" height="32" width="32"/>
+        <a href="https://mijnlucas.sintlucas.nl/" ><img src="../Img/letter-m.png" height="32" width="32"/></a>
+        <a href="https://www.facebook.com/?locale=nl_NL"><img src="../Img/facebook%20(3).png" height="32" width="32"/></a>
+        <a href="https://x.com/i/flow/login"><img src="../Img/twitter.png" height="32" width="32"/></a>
       </div>
       <div class="scroll-down">
         <img src="../Img/mouse.png" height="37" width="37"/>
@@ -124,6 +124,38 @@ display: flex;
   height: 1px;
   background: #afafaf;
 }
+
+.nav-items a{
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-items a:hover {
+  color: #939693;
+}
+
+.nav-items a::after{
+  background: #939693;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width .2s;
+  content: '';
+}
+
+.nav-items a:hover::after{
+  width: 100%;
+}
+
+
+
+
+
 
 
 
@@ -222,6 +254,14 @@ display: flex;
   margin-top: 100px;
 }
 
+.imgs img{
+  transition: transform .3s;
+}
+.imgs img:hover{
+  transform:scale(1.3);
+}
+
+
 .groen-vak-imgs{
   height: 370px;
   width: 150px;
@@ -234,6 +274,7 @@ display: flex;
 
 .under-text{
   display: flex;
+  justify-content: space-around;
 }
 
 
